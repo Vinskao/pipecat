@@ -16,6 +16,12 @@ resolution-markers = [
     "(python_full_version < '3.11' and platform_machine != 'aarch64' and sys_platform == 'linux') or (python_full_version < '3.11' and sys_platform != 'darwin' and sys_platform != 'linux')",
 ]
 
+[manifest]
+members = [
+    "maya",
+    "pipecat-ai",
+]
+
 [[package]]
 name = "accelerate"
 version = "1.10.0"
@@ -3008,6 +3014,17 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/ec/74/a2b9b04824b9c349c8f1b2d21d5af43fa7010039427f2b133a034cb09e59/matplotlib-3.10.5-pp311-pypy311_pp73-macosx_11_0_arm64.whl", hash = "sha256:ac3d50760394d78a3c9be6b28318fe22b494c4fcf6407e8fd4794b538251899b", size = 8098539, upload-time = "2025-07-31T18:09:29.629Z" },
     { url = "https://files.pythonhosted.org/packages/fc/66/cd29ebc7f6c0d2a15d216fb572573e8fc38bd5d6dec3bd9d7d904c0949f7/matplotlib-3.10.5-pp311-pypy311_pp73-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:6c49465bf689c4d59d174d0c7795fb42a21d4244d11d70e52b8011987367ac61", size = 8672192, upload-time = "2025-07-31T18:09:31.407Z" },
 ]
+
+[[package]]
+name = "maya"
+version = "0.1.0"
+source = { virtual = "maya" }
+dependencies = [
+    { name = "pipecat-ai", extra = ["openai"] },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pipecat-ai", extras = ["openai"], editable = "." }]
 
 [[package]]
 name = "mcp"
