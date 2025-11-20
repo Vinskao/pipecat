@@ -3020,11 +3020,15 @@ name = "maya"
 version = "0.1.0"
 source = { virtual = "maya" }
 dependencies = [
-    { name = "pipecat-ai", extra = ["openai"] },
+    { name = "pipecat-ai", extra = ["deepgram", "elevenlabs", "local", "openai", "runner", "silero", "webrtc"] },
+    { name = "python-dotenv" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "pipecat-ai", extras = ["openai"], editable = "." }]
+requires-dist = [
+    { name = "pipecat-ai", extras = ["openai", "deepgram", "elevenlabs", "silero", "local", "runner", "webrtc"], editable = "." },
+    { name = "python-dotenv" },
+]
 
 [[package]]
 name = "mcp"

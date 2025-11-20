@@ -5,7 +5,8 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "pipecat-ai[openai]",
+    "pipecat-ai[openai,deepgram,elevenlabs,silero,local,runner,webrtc]",
+    "python-dotenv",
 ]
 
 [tool.uv.sources]

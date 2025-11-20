@@ -1,0 +1,324 @@
+2025-09-17 22:11:47.924 | INFO     | pipecat:<module>:14 - ᓚᘏᗢ Pipecat 0.0.0.dev5530 (Python 3.13.5 (main, Jun 11 2025, 15:36:57) [Clang 17.0.0 (clang-1700.0.13.3)]) ᓚᘏᗢ
+2025-09-17 22:11:49.512 | INFO     | __main__:<module>:244 - 🎤 啟動本地音頻模式
+2025-09-17 22:11:49.512 | SUCCESS  | __main__:main_local:220 - ✅ 環境變數檢查通過
+2025-09-17 22:11:49.512 | INFO     | __main__:main_local:221 - 🎭 Maya 已準備就緒...
+2025-09-17 22:11:49.512 | DEBUG    | pipecat.audio.vad.silero:__init__:147 - Loading Silero VAD model...
+2025-09-17 22:11:49.582 | DEBUG    | pipecat.audio.vad.silero:__init__:169 - Loaded Silero VAD
+2025-09-17 22:11:49.656 | INFO     | __main__:run_maya_bot:128 - 🎭 啟動 Maya 語音聊天機器人...
+2025-09-17 22:11:49.656 | INFO     | __main__:run_maya_bot:129 - 🌏 語音辨識: zh-TW
+2025-09-17 22:11:49.656 | INFO     | __main__:run_maya_bot:130 - 💡 開始說話進行對話...
+2025-09-17 22:11:49.686 | DEBUG    | pipecat.processors.frame_processor:link:509 - Linking Pipeline#0::Source -> LocalAudioInputTransport#0
+2025-09-17 22:11:49.687 | DEBUG    | pipecat.processors.frame_processor:link:509 - Linking LocalAudioInputTransport#0 -> OpenAISTTService#0
+2025-09-17 22:11:49.687 | DEBUG    | pipecat.processors.frame_processor:link:509 - Linking OpenAISTTService#0 -> MayaChatProcessor#0
+2025-09-17 22:11:49.687 | DEBUG    | pipecat.processors.frame_processor:link:509 - Linking MayaChatProcessor#0 -> ElevenLabsTTSService#0
+2025-09-17 22:11:49.687 | DEBUG    | pipecat.processors.frame_processor:link:509 - Linking ElevenLabsTTSService#0 -> MetricsLogger#0
+2025-09-17 22:11:49.687 | DEBUG    | pipecat.processors.frame_processor:link:509 - Linking MetricsLogger#0 -> LocalAudioOutputTransport#0
+2025-09-17 22:11:49.687 | DEBUG    | pipecat.processors.frame_processor:link:509 - Linking LocalAudioOutputTransport#0 -> Pipeline#0::Sink
+2025-09-17 22:11:49.687 | DEBUG    | pipecat.processors.frame_processor:link:509 - Linking PipelineTask#0::Source -> Pipeline#0
+2025-09-17 22:11:49.687 | DEBUG    | pipecat.processors.frame_processor:link:509 - Linking Pipeline#0 -> PipelineTask#0::Sink
+2025-09-17 22:11:49.687 | WARNING  | pipecat.utils.base_object:add_event_handler:108 - Event handler on_client_connected not registered
+2025-09-17 22:11:49.687 | WARNING  | pipecat.utils.base_object:add_event_handler:108 - Event handler on_client_disconnected not registered
+2025-09-17 22:11:49.687 | DEBUG    | pipecat.pipeline.runner:run:71 - Runner PipelineRunner#0 started running PipelineTask#0
+2025-09-17 22:11:49.687 | DEBUG    | pipecat.pipeline.task:_wait_for_pipeline_start:562 - PipelineTask#0: Starting. Waiting for StartFrame#0 to reach the end of the pipeline...
+2025-09-17 22:11:49.687 | DEBUG    | pipecat.audio.vad.vad_analyzer:set_params:150 - Setting VAD params to: confidence=0.7 start_secs=0.2 stop_secs=0.8 min_volume=0.6
+2025-09-17 22:11:49.774 | DEBUG    | pipecat.services.elevenlabs.tts:_connect_websocket:493 - Connecting to ElevenLabs
+2025-09-17 22:11:49.997 | DEBUG    | pipecat.pipeline.task:_wait_for_pipeline_start:565 - PipelineTask#0: StartFrame#0 reached the end of the pipeline, pipeline is now ready.
+2025-09-17 22:11:49.997 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.00ms
+2025-09-17 22:11:49.998 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.00ms
+2025-09-17 22:11:49.998 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.00ms
+2025-09-17 22:11:49.998 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.00ms
+2025-09-17 22:11:55.437 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:337 - User started speaking
+2025-09-17 22:11:55.437 | DEBUG    | pipecat.pipeline.task:_source_push_frame:693 - PipelineTask#0: received interruption task frame InterruptionTaskFrame#0
+2025-09-17 22:11:59.214 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:361 - User stopped speaking
+2025-09-17 22:12:01.500 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - OpenAISTTService#0 TTFB: 2.2851719856262207
+2025-09-17 22:12:01.500 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - OpenAISTTService#0 processing time: 2.285547971725464
+2025-09-17 22:12:01.500 | DEBUG    | pipecat.services.whisper.base_stt:run_stt:221 - Transcription: [我要說你要怎麼辦?]
+2025-09-17 22:12:01.504 | INFO     | __main__:process_frame:83 - 👤 用戶說話: 我要說你要怎麼辦?
+2025-09-17 22:12:01.506 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 2.29ms
+2025-09-17 22:12:01.506 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 2.29ms
+2025-09-17 22:12:03.722 | INFO     | __main__:process_frame:99 - 🤖 Maya回應: 如果你有任何問題或需要幫忙的地方，隨時告訴我，我會盡力協助你！你想談談什麼呢？
+2025-09-17 22:12:03.722 | DEBUG    | pipecat.services.elevenlabs.tts:run_tts:674 - ElevenLabsTTSService#0: Generating TTS [如果你有任何問題或需要幫忙的地方，隨時告訴我，我會盡力協助你！你想談談什麼呢？]
+2025-09-17 22:12:03.723 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:start_tts_usage_metrics:191 - ElevenLabsTTSService#0 usage characters: 39
+2025-09-17 22:12:03.723 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - ElevenLabsTTSService#0 processing time: 0.0003192424774169922
+2025-09-17 22:12:03.723 | INFO     | __main__:process_frame:58 - 🔊 TTS字符數: 39
+2025-09-17 22:12:03.723 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.00ms
+2025-09-17 22:12:04.245 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:337 - User started speaking
+2025-09-17 22:12:04.245 | DEBUG    | pipecat.pipeline.task:_source_push_frame:693 - PipelineTask#0: received interruption task frame InterruptionTaskFrame#1
+2025-09-17 22:12:04.246 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - ElevenLabsTTSService#0 TTFB: 0.523339033126831
+2025-09-17 22:12:04.246 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.52ms
+2025-09-17 22:12:04.270 | DEBUG    | pipecat.services.elevenlabs.tts:_receive_messages:599 - Ignoring message from unavailable context: 80c076e0-76cd-4707-b099-4c8938ee362b
+2025-09-17 22:12:05.585 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:361 - User stopped speaking
+2025-09-17 22:12:06.779 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - OpenAISTTService#0 TTFB: 1.1937551498413086
+2025-09-17 22:12:06.779 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - OpenAISTTService#0 processing time: 1.1940369606018066
+2025-09-17 22:12:06.779 | DEBUG    | pipecat.services.whisper.base_stt:run_stt:221 - Transcription: [好啊現這樣。]
+2025-09-17 22:12:06.785 | INFO     | __main__:process_frame:83 - 👤 用戶說話: 好啊現這樣。
+2025-09-17 22:12:06.787 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 1.19ms
+2025-09-17 22:12:06.788 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 1.19ms
+2025-09-17 22:12:07.165 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:337 - User started speaking
+2025-09-17 22:12:07.165 | DEBUG    | pipecat.pipeline.task:_source_push_frame:693 - PipelineTask#0: received interruption task frame InterruptionTaskFrame#2
+2025-09-17 22:12:08.126 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:361 - User stopped speaking
+2025-09-17 22:12:09.440 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - OpenAISTTService#0 TTFB: 1.3128623962402344
+2025-09-17 22:12:09.440 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - OpenAISTTService#0 processing time: 1.3129749298095703
+2025-09-17 22:12:09.440 | DEBUG    | pipecat.services.whisper.base_stt:run_stt:221 - Transcription: [拜拜。]
+2025-09-17 22:12:09.442 | INFO     | __main__:process_frame:83 - 👤 用戶說話: 拜拜。
+2025-09-17 22:12:09.443 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 1.31ms
+2025-09-17 22:12:09.443 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 1.31ms
+2025-09-17 22:12:11.637 | INFO     | __main__:process_frame:99 - 🤖 Maya回應: 再見！如果你需要任何幫助，隨時回來找我喔！願你有個美好的一天！
+2025-09-17 22:12:11.637 | DEBUG    | pipecat.services.elevenlabs.tts:run_tts:674 - ElevenLabsTTSService#0: Generating TTS [再見！如果你需要任何幫助，隨時回來找我喔！願你有個美好的一天！]
+2025-09-17 22:12:11.637 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:start_tts_usage_metrics:191 - ElevenLabsTTSService#0 usage characters: 31
+2025-09-17 22:12:11.637 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - ElevenLabsTTSService#0 processing time: 0.00024008750915527344
+2025-09-17 22:12:11.637 | INFO     | __main__:process_frame:58 - 🔊 TTS字符數: 31
+2025-09-17 22:12:11.637 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.00ms
+2025-09-17 22:12:12.124 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - ElevenLabsTTSService#0 TTFB: 0.4870941638946533
+2025-09-17 22:12:12.125 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.49ms
+2025-09-17 22:12:12.128 | DEBUG    | pipecat.transports.base_output:_bot_started_speaking:600 - Bot started speaking
+2025-09-17 22:12:12.667 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:337 - User started speaking
+2025-09-17 22:12:12.667 | DEBUG    | pipecat.pipeline.task:_source_push_frame:693 - PipelineTask#0: received interruption task frame InterruptionTaskFrame#3
+2025-09-17 22:12:12.671 | DEBUG    | pipecat.transports.base_output:_bot_stopped_speaking:616 - Bot stopped speaking
+2025-09-17 22:12:13.727 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:361 - User stopped speaking
+2025-09-17 22:12:14.882 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - OpenAISTTService#0 TTFB: 1.1544361114501953
+2025-09-17 22:12:14.882 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - OpenAISTTService#0 processing time: 1.154999017715454
+2025-09-17 22:12:14.883 | DEBUG    | pipecat.services.whisper.base_stt:run_stt:221 - Transcription: [再见。]
+2025-09-17 22:12:14.888 | INFO     | __main__:process_frame:83 - 👤 用戶說話: 再见。
+2025-09-17 22:12:14.892 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 1.15ms
+2025-09-17 22:12:14.892 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 1.15ms
+2025-09-17 22:12:15.166 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:337 - User started speaking
+2025-09-17 22:12:15.167 | DEBUG    | pipecat.pipeline.task:_source_push_frame:693 - PipelineTask#0: received interruption task frame InterruptionTaskFrame#4
+2025-09-17 22:12:16.827 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:361 - User stopped speaking
+2025-09-17 22:12:17.545 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - OpenAISTTService#0 TTFB: 0.7178969383239746
+2025-09-17 22:12:17.546 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - OpenAISTTService#0 processing time: 0.7183890342712402
+2025-09-17 22:12:17.546 | DEBUG    | pipecat.services.whisper.base_stt:run_stt:221 - Transcription: [再见是什么意思?]
+2025-09-17 22:12:17.550 | INFO     | __main__:process_frame:83 - 👤 用戶說話: 再见是什么意思?
+2025-09-17 22:12:17.554 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.72ms
+2025-09-17 22:12:17.554 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.72ms
+2025-09-17 22:12:19.086 | INFO     | __main__:process_frame:99 - 🤖 Maya回應: “再见”是中文中用来表示告别的词语，意思是希望未来还能再见到对方。它通常用在分别时，传达了一种期待再次相聚的美好愿望。你对这个词还有什么想了解的吗？
+2025-09-17 22:12:19.086 | DEBUG    | pipecat.services.elevenlabs.tts:run_tts:674 - ElevenLabsTTSService#0: Generating TTS [“再见”是中文中用来表示告别的词语，意思是希望未来还能再见到对方。它通常用在分别时，传达了一种期待再次相聚的美好愿望。你对这个词还有什么想了解的吗？]
+2025-09-17 22:12:19.088 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:start_tts_usage_metrics:191 - ElevenLabsTTSService#0 usage characters: 74
+2025-09-17 22:12:19.088 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - ElevenLabsTTSService#0 processing time: 0.0015120506286621094
+2025-09-17 22:12:19.088 | INFO     | __main__:process_frame:58 - 🔊 TTS字符數: 74
+2025-09-17 22:12:19.088 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.00ms
+2025-09-17 22:12:19.885 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - ElevenLabsTTSService#0 TTFB: 0.7981328964233398
+2025-09-17 22:12:19.888 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.80ms
+2025-09-17 22:12:19.893 | DEBUG    | pipecat.transports.base_output:_bot_started_speaking:600 - Bot started speaking
+2025-09-17 22:12:20.444 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:337 - User started speaking
+2025-09-17 22:12:20.445 | DEBUG    | pipecat.pipeline.task:_source_push_frame:693 - PipelineTask#0: received interruption task frame InterruptionTaskFrame#5
+2025-09-17 22:12:20.446 | DEBUG    | pipecat.transports.base_output:_bot_stopped_speaking:616 - Bot stopped speaking
+2025-09-17 22:12:21.426 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:361 - User stopped speaking
+2025-09-17 22:12:22.968 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - OpenAISTTService#0 TTFB: 1.5410950183868408
+2025-09-17 22:12:22.968 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - OpenAISTTService#0 processing time: 1.5412139892578125
+2025-09-17 22:12:22.968 | DEBUG    | pipecat.services.whisper.base_stt:run_stt:221 - Transcription: [再见圳]
+2025-09-17 22:12:22.970 | INFO     | __main__:process_frame:83 - 👤 用戶說話: 再见圳
+2025-09-17 22:12:22.972 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 1.54ms
+2025-09-17 22:12:22.972 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 1.54ms
+2025-09-17 22:12:25.388 | INFO     | __main__:process_frame:99 - 🤖 Maya回應: “再见圳”这个词一般是指再见与“圳”字搭配，可能是随便组合的话。更常见的是“再见”这个词本身。如果你指的是某个特定的地方或者有其他的意思，欢迎告诉我，我会很乐意帮你解答！
+2025-09-17 22:12:25.389 | DEBUG    | pipecat.services.elevenlabs.tts:run_tts:674 - ElevenLabsTTSService#0: Generating TTS [“再见圳”这个词一般是指再见与“圳”字搭配，可能是随便组合的话。更常见的是“再见”这个词本身。如果你指的是某个特定的地方或者有其他的意思，欢迎告诉我，我会很乐意帮你解答！]
+2025-09-17 22:12:25.390 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:start_tts_usage_metrics:191 - ElevenLabsTTSService#0 usage characters: 85
+2025-09-17 22:12:25.390 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - ElevenLabsTTSService#0 processing time: 0.0009191036224365234
+2025-09-17 22:12:25.390 | INFO     | __main__:process_frame:58 - 🔊 TTS字符數: 85
+2025-09-17 22:12:25.390 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.00ms
+2025-09-17 22:12:26.259 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - ElevenLabsTTSService#0 TTFB: 0.8696649074554443
+2025-09-17 22:12:26.264 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.87ms
+2025-09-17 22:12:26.274 | DEBUG    | pipecat.transports.base_output:_bot_started_speaking:600 - Bot started speaking
+2025-09-17 22:12:26.866 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:337 - User started speaking
+2025-09-17 22:12:26.867 | DEBUG    | pipecat.pipeline.task:_source_push_frame:693 - PipelineTask#0: received interruption task frame InterruptionTaskFrame#6
+2025-09-17 22:12:26.871 | DEBUG    | pipecat.transports.base_output:_bot_stopped_speaking:616 - Bot stopped speaking
+2025-09-17 22:12:27.867 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:361 - User stopped speaking
+2025-09-17 22:12:29.185 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - OpenAISTTService#0 TTFB: 1.3178911209106445
+2025-09-17 22:12:29.186 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - OpenAISTTService#0 processing time: 1.3183691501617432
+2025-09-17 22:12:29.186 | DEBUG    | pipecat.services.whisper.base_stt:run_stt:221 - Transcription: [再见。]
+2025-09-17 22:12:29.192 | INFO     | __main__:process_frame:83 - 👤 用戶說話: 再见。
+2025-09-17 22:12:29.195 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 1.32ms
+2025-09-17 22:12:29.195 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 1.32ms
+2025-09-17 22:12:30.651 | INFO     | __main__:process_frame:99 - 🤖 Maya回應: 再见！希望你有美好的一天。如果需要帮助，随时欢迎回来哦！
+2025-09-17 22:12:30.652 | DEBUG    | pipecat.services.elevenlabs.tts:run_tts:674 - ElevenLabsTTSService#0: Generating TTS [再见！希望你有美好的一天。如果需要帮助，随时欢迎回来哦！]
+2025-09-17 22:12:30.652 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:start_tts_usage_metrics:191 - ElevenLabsTTSService#0 usage characters: 28
+2025-09-17 22:12:30.652 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - ElevenLabsTTSService#0 processing time: 0.0007879734039306641
+2025-09-17 22:12:30.653 | INFO     | __main__:process_frame:58 - 🔊 TTS字符數: 28
+2025-09-17 22:12:30.653 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.00ms
+2025-09-17 22:12:31.093 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - ElevenLabsTTSService#0 TTFB: 0.44135236740112305
+2025-09-17 22:12:31.096 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.44ms
+2025-09-17 22:12:31.099 | DEBUG    | pipecat.transports.base_output:_bot_started_speaking:600 - Bot started speaking
+2025-09-17 22:12:31.647 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:337 - User started speaking
+2025-09-17 22:12:31.647 | DEBUG    | pipecat.pipeline.task:_source_push_frame:693 - PipelineTask#0: received interruption task frame InterruptionTaskFrame#7
+2025-09-17 22:12:31.651 | DEBUG    | pipecat.transports.base_output:_bot_stopped_speaking:616 - Bot stopped speaking
+2025-09-17 22:12:32.626 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:361 - User stopped speaking
+2025-09-17 22:12:33.318 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - OpenAISTTService#0 TTFB: 0.6906716823577881
+2025-09-17 22:12:33.318 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - OpenAISTTService#0 processing time: 0.6911787986755371
+2025-09-17 22:12:33.318 | DEBUG    | pipecat.services.whisper.base_stt:run_stt:221 - Transcription: [再见。]
+2025-09-17 22:12:33.322 | INFO     | __main__:process_frame:83 - 👤 用戶說話: 再见。
+2025-09-17 22:12:33.326 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.69ms
+2025-09-17 22:12:33.326 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.69ms
+2025-09-17 22:12:35.186 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:337 - User started speaking
+2025-09-17 22:12:35.187 | DEBUG    | pipecat.pipeline.task:_source_push_frame:693 - PipelineTask#0: received interruption task frame InterruptionTaskFrame#8
+2025-09-17 22:12:36.626 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:361 - User stopped speaking
+2025-09-17 22:12:38.639 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - OpenAISTTService#0 TTFB: 2.0114476680755615
+2025-09-17 22:12:38.639 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - OpenAISTTService#0 processing time: 2.011922836303711
+2025-09-17 22:12:38.639 | DEBUG    | pipecat.services.whisper.base_stt:run_stt:221 - Transcription: [你喜歡我嗎?]
+2025-09-17 22:12:38.649 | INFO     | __main__:process_frame:83 - 👤 用戶說話: 你喜歡我嗎?
+2025-09-17 22:12:38.651 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 2.01ms
+2025-09-17 22:12:38.651 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 2.01ms
+2025-09-17 22:12:40.027 | INFO     | __main__:process_frame:99 - 🤖 Maya回應: 我很喜欢跟你交流！每次和你对话我都感到很开心。如果你有任何问题或者想分享的事情，欢迎随时告诉我！
+2025-09-17 22:12:40.028 | DEBUG    | pipecat.services.elevenlabs.tts:run_tts:674 - ElevenLabsTTSService#0: Generating TTS [我很喜欢跟你交流！每次和你对话我都感到很开心。如果你有任何问题或者想分享的事情，欢迎随时告诉我！]
+2025-09-17 22:12:40.029 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:start_tts_usage_metrics:191 - ElevenLabsTTSService#0 usage characters: 48
+2025-09-17 22:12:40.029 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - ElevenLabsTTSService#0 processing time: 0.0008268356323242188
+2025-09-17 22:12:40.029 | INFO     | __main__:process_frame:58 - 🔊 TTS字符數: 48
+2025-09-17 22:12:40.029 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.00ms
+2025-09-17 22:12:40.620 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - ElevenLabsTTSService#0 TTFB: 0.5917189121246338
+2025-09-17 22:12:40.623 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.59ms
+2025-09-17 22:12:40.630 | DEBUG    | pipecat.transports.base_output:_bot_started_speaking:600 - Bot started speaking
+2025-09-17 22:12:41.086 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:337 - User started speaking
+2025-09-17 22:12:41.087 | DEBUG    | pipecat.pipeline.task:_source_push_frame:693 - PipelineTask#0: received interruption task frame InterruptionTaskFrame#9
+2025-09-17 22:12:41.090 | DEBUG    | pipecat.transports.base_output:_bot_stopped_speaking:616 - Bot stopped speaking
+2025-09-17 22:12:42.126 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:361 - User stopped speaking
+2025-09-17 22:12:44.067 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - OpenAISTTService#0 TTFB: 1.9403049945831299
+2025-09-17 22:12:44.068 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - OpenAISTTService#0 processing time: 1.940788984298706
+2025-09-17 22:12:44.068 | DEBUG    | pipecat.services.whisper.base_stt:run_stt:221 - Transcription: [我很]
+2025-09-17 22:12:44.077 | INFO     | __main__:process_frame:83 - 👤 用戶說話: 我很
+2025-09-17 22:12:44.079 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 1.94ms
+2025-09-17 22:12:44.079 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 1.94ms
+2025-09-17 22:12:45.806 | INFO     | __main__:process_frame:99 - 🤖 Maya回應: 听起来你有些话想说，可以继续吗？我在这里倾听哦！
+2025-09-17 22:12:45.806 | DEBUG    | pipecat.services.elevenlabs.tts:run_tts:674 - ElevenLabsTTSService#0: Generating TTS [听起来你有些话想说，可以继续吗？我在这里倾听哦！]
+2025-09-17 22:12:45.806 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:start_tts_usage_metrics:191 - ElevenLabsTTSService#0 usage characters: 24
+2025-09-17 22:12:45.806 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - ElevenLabsTTSService#0 processing time: 0.00021719932556152344
+2025-09-17 22:12:45.806 | INFO     | __main__:process_frame:58 - 🔊 TTS字符數: 24
+2025-09-17 22:12:45.806 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.00ms
+2025-09-17 22:12:46.350 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - ElevenLabsTTSService#0 TTFB: 0.544011116027832
+2025-09-17 22:12:46.350 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.54ms
+2025-09-17 22:12:46.351 | DEBUG    | pipecat.transports.base_output:_bot_started_speaking:600 - Bot started speaking
+2025-09-17 22:12:46.846 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:337 - User started speaking
+2025-09-17 22:12:46.847 | DEBUG    | pipecat.pipeline.task:_source_push_frame:693 - PipelineTask#0: received interruption task frame InterruptionTaskFrame#10
+2025-09-17 22:12:46.850 | DEBUG    | pipecat.transports.base_output:_bot_stopped_speaking:616 - Bot stopped speaking
+2025-09-17 22:12:47.926 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:361 - User stopped speaking
+2025-09-17 22:12:49.506 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - OpenAISTTService#0 TTFB: 1.5792512893676758
+2025-09-17 22:12:49.506 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - OpenAISTTService#0 processing time: 1.5793688297271729
+2025-09-17 22:12:49.506 | DEBUG    | pipecat.services.whisper.base_stt:run_stt:221 - Transcription: [听起来]
+2025-09-17 22:12:49.508 | INFO     | __main__:process_frame:83 - 👤 用戶說話: 听起来
+2025-09-17 22:12:49.509 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 1.58ms
+2025-09-17 22:12:49.509 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 1.58ms
+2025-09-17 22:12:50.763 | INFO     | __main__:process_frame:99 - 🤖 Maya回應: 听起来你有些想法在酝酿中呢！你想说些什么呢？我很期待你的分享。
+2025-09-17 22:12:50.763 | DEBUG    | pipecat.services.elevenlabs.tts:run_tts:674 - ElevenLabsTTSService#0: Generating TTS [听起来你有些想法在酝酿中呢！你想说些什么呢？我很期待你的分享。]
+2025-09-17 22:12:50.763 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:start_tts_usage_metrics:191 - ElevenLabsTTSService#0 usage characters: 31
+2025-09-17 22:12:50.763 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - ElevenLabsTTSService#0 processing time: 0.00020623207092285156
+2025-09-17 22:12:50.763 | INFO     | __main__:process_frame:58 - 🔊 TTS字符數: 31
+2025-09-17 22:12:50.763 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.00ms
+2025-09-17 22:12:51.253 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - ElevenLabsTTSService#0 TTFB: 0.4898521900177002
+2025-09-17 22:12:51.254 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.49ms
+2025-09-17 22:12:51.255 | DEBUG    | pipecat.transports.base_output:_bot_started_speaking:600 - Bot started speaking
+2025-09-17 22:12:51.726 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:337 - User started speaking
+2025-09-17 22:12:51.727 | DEBUG    | pipecat.pipeline.task:_source_push_frame:693 - PipelineTask#0: received interruption task frame InterruptionTaskFrame#11
+2025-09-17 22:12:51.730 | DEBUG    | pipecat.transports.base_output:_bot_stopped_speaking:616 - Bot stopped speaking
+2025-09-17 22:12:52.766 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:361 - User stopped speaking
+2025-09-17 22:12:54.533 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - OpenAISTTService#0 TTFB: 1.7657179832458496
+2025-09-17 22:12:54.533 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - OpenAISTTService#0 processing time: 1.766206979751587
+2025-09-17 22:12:54.533 | DEBUG    | pipecat.services.whisper.base_stt:run_stt:221 - Transcription: [听起来]
+2025-09-17 22:12:54.542 | INFO     | __main__:process_frame:83 - 👤 用戶說話: 听起来
+2025-09-17 22:12:54.544 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 1.77ms
+2025-09-17 22:12:54.545 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 1.77ms
+2025-09-17 22:12:56.622 | INFO     | __main__:process_frame:99 - 🤖 Maya回應: 如果你在说“听起来”这句话后还有其他想表达的内容，欢迎继续说下去！我在这里可以和你聊任何事情哦！
+2025-09-17 22:12:56.623 | DEBUG    | pipecat.services.elevenlabs.tts:run_tts:674 - ElevenLabsTTSService#0: Generating TTS [如果你在说“听起来”这句话后还有其他想表达的内容，欢迎继续说下去！我在这里可以和你聊任何事情哦！]
+2025-09-17 22:12:56.623 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:start_tts_usage_metrics:191 - ElevenLabsTTSService#0 usage characters: 48
+2025-09-17 22:12:56.623 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - ElevenLabsTTSService#0 processing time: 0.0005888938903808594
+2025-09-17 22:12:56.624 | INFO     | __main__:process_frame:58 - 🔊 TTS字符數: 48
+2025-09-17 22:12:56.624 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.00ms
+2025-09-17 22:12:57.718 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - ElevenLabsTTSService#0 TTFB: 1.0955781936645508
+2025-09-17 22:12:57.721 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 1.10ms
+2025-09-17 22:12:57.725 | DEBUG    | pipecat.transports.base_output:_bot_started_speaking:600 - Bot started speaking
+2025-09-17 22:12:58.326 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:337 - User started speaking
+2025-09-17 22:12:58.327 | DEBUG    | pipecat.pipeline.task:_source_push_frame:693 - PipelineTask#0: received interruption task frame InterruptionTaskFrame#12
+2025-09-17 22:12:58.331 | DEBUG    | pipecat.transports.base_output:_bot_stopped_speaking:616 - Bot stopped speaking
+2025-09-17 22:12:59.405 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:361 - User stopped speaking
+2025-09-17 22:13:00.563 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - OpenAISTTService#0 TTFB: 1.1578328609466553
+2025-09-17 22:13:00.563 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - OpenAISTTService#0 processing time: 1.158060073852539
+2025-09-17 22:13:00.563 | DEBUG    | pipecat.services.whisper.base_stt:run_stt:221 - Transcription: [如果你在]
+2025-09-17 22:13:00.566 | INFO     | __main__:process_frame:83 - 👤 用戶說話: 如果你在
+2025-09-17 22:13:00.567 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 1.16ms
+2025-09-17 22:13:00.567 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 1.16ms
+2025-09-17 22:13:02.099 | INFO     | __main__:process_frame:99 - 🤖 Maya回應: 如果我在的话，请告诉我你想讨论的话题或者问题，我会尽力帮助你！你有什么想知道的或者想聊的呢？
+2025-09-17 22:13:02.099 | DEBUG    | pipecat.services.elevenlabs.tts:run_tts:674 - ElevenLabsTTSService#0: Generating TTS [如果我在的话，请告诉我你想讨论的话题或者问题，我会尽力帮助你！你有什么想知道的或者想聊的呢？]
+2025-09-17 22:13:02.100 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:start_tts_usage_metrics:191 - ElevenLabsTTSService#0 usage characters: 46
+2025-09-17 22:13:02.100 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - ElevenLabsTTSService#0 processing time: 0.00026416778564453125
+2025-09-17 22:13:02.100 | INFO     | __main__:process_frame:58 - 🔊 TTS字符數: 46
+2025-09-17 22:13:02.100 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.00ms
+2025-09-17 22:13:02.652 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - ElevenLabsTTSService#0 TTFB: 0.5521531105041504
+2025-09-17 22:13:02.653 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.55ms
+2025-09-17 22:13:02.657 | DEBUG    | pipecat.transports.base_output:_bot_started_speaking:600 - Bot started speaking
+2025-09-17 22:13:03.606 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:337 - User started speaking
+2025-09-17 22:13:03.606 | DEBUG    | pipecat.pipeline.task:_source_push_frame:693 - PipelineTask#0: received interruption task frame InterruptionTaskFrame#13
+2025-09-17 22:13:03.609 | DEBUG    | pipecat.transports.base_output:_bot_stopped_speaking:616 - Bot stopped speaking
+2025-09-17 22:13:04.626 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:361 - User stopped speaking
+2025-09-17 22:13:06.489 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - OpenAISTTService#0 TTFB: 1.8618087768554688
+2025-09-17 22:13:06.489 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - OpenAISTTService#0 processing time: 1.8622028827667236
+2025-09-17 22:13:06.489 | DEBUG    | pipecat.services.whisper.base_stt:run_stt:221 - Transcription: [如果我在的]
+2025-09-17 22:13:06.492 | INFO     | __main__:process_frame:83 - 👤 用戶說話: 如果我在的
+2025-09-17 22:13:06.493 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 1.86ms
+2025-09-17 22:13:06.493 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 1.86ms
+2025-09-17 22:13:07.827 | INFO     | __main__:process_frame:99 - 🤖 Maya回應: 如果你在那边，有什么我可以帮你的吗？无论是问题、分享或是想聊天，我都很乐意倾听！
+2025-09-17 22:13:07.828 | DEBUG    | pipecat.services.elevenlabs.tts:run_tts:674 - ElevenLabsTTSService#0: Generating TTS [如果你在那边，有什么我可以帮你的吗？无论是问题、分享或是想聊天，我都很乐意倾听！]
+2025-09-17 22:13:07.828 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:start_tts_usage_metrics:191 - ElevenLabsTTSService#0 usage characters: 40
+2025-09-17 22:13:07.828 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - ElevenLabsTTSService#0 processing time: 0.0002281665802001953
+2025-09-17 22:13:07.828 | INFO     | __main__:process_frame:58 - 🔊 TTS字符數: 40
+2025-09-17 22:13:07.828 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.00ms
+2025-09-17 22:13:08.319 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - ElevenLabsTTSService#0 TTFB: 0.49146080017089844
+2025-09-17 22:13:08.320 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.49ms
+2025-09-17 22:13:08.322 | DEBUG    | pipecat.transports.base_output:_bot_started_speaking:600 - Bot started speaking
+2025-09-17 22:13:09.045 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:337 - User started speaking
+2025-09-17 22:13:09.045 | DEBUG    | pipecat.pipeline.task:_source_push_frame:693 - PipelineTask#0: received interruption task frame InterruptionTaskFrame#14
+2025-09-17 22:13:09.047 | DEBUG    | pipecat.transports.base_output:_bot_stopped_speaking:616 - Bot stopped speaking
+2025-09-17 22:13:10.065 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:361 - User stopped speaking
+2025-09-17 22:13:10.860 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - OpenAISTTService#0 TTFB: 0.7939839363098145
+2025-09-17 22:13:10.860 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - OpenAISTTService#0 processing time: 0.7942678928375244
+2025-09-17 22:13:10.860 | DEBUG    | pipecat.services.whisper.base_stt:run_stt:221 - Transcription: [如果你在那]
+2025-09-17 22:13:10.862 | INFO     | __main__:process_frame:83 - 👤 用戶說話: 如果你在那
+2025-09-17 22:13:10.863 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.79ms
+2025-09-17 22:13:10.863 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.79ms
+2025-09-17 22:13:12.235 | INFO     | __main__:process_frame:99 - 🤖 Maya回應: 如果我在那，我会很高兴能和你面对面聊天！有什么特别想讨论的事情吗？或者你有想分享的故事吗？我在这里等着哦！
+2025-09-17 22:13:12.235 | DEBUG    | pipecat.services.elevenlabs.tts:run_tts:674 - ElevenLabsTTSService#0: Generating TTS [如果我在那，我会很高兴能和你面对面聊天！有什么特别想讨论的事情吗？或者你有想分享的故事吗？我在这里等着哦！]
+2025-09-17 22:13:12.235 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:start_tts_usage_metrics:191 - ElevenLabsTTSService#0 usage characters: 53
+2025-09-17 22:13:12.235 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - ElevenLabsTTSService#0 processing time: 0.0002849102020263672
+2025-09-17 22:13:12.235 | INFO     | __main__:process_frame:58 - 🔊 TTS字符數: 53
+2025-09-17 22:13:12.235 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.00ms
+2025-09-17 22:13:12.787 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - ElevenLabsTTSService#0 TTFB: 0.5522191524505615
+2025-09-17 22:13:12.789 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.55ms
+2025-09-17 22:13:12.791 | DEBUG    | pipecat.transports.base_output:_bot_started_speaking:600 - Bot started speaking
+2025-09-17 22:13:13.805 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:337 - User started speaking
+2025-09-17 22:13:13.805 | DEBUG    | pipecat.pipeline.task:_source_push_frame:693 - PipelineTask#0: received interruption task frame InterruptionTaskFrame#15
+2025-09-17 22:13:13.806 | DEBUG    | pipecat.transports.base_output:_bot_stopped_speaking:616 - Bot stopped speaking
+2025-09-17 22:13:14.846 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:361 - User stopped speaking
+2025-09-17 22:13:15.746 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - OpenAISTTService#0 TTFB: 0.8986430168151855
+2025-09-17 22:13:15.746 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - OpenAISTTService#0 processing time: 0.8987691402435303
+2025-09-17 22:13:15.746 | DEBUG    | pipecat.services.whisper.base_stt:run_stt:221 - Transcription: [如果我在呢。]
+2025-09-17 22:13:15.747 | INFO     | __main__:process_frame:83 - 👤 用戶說話: 如果我在呢。
+2025-09-17 22:13:15.748 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.90ms
+2025-09-17 22:13:15.748 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.90ms
+2025-09-17 22:13:17.103 | INFO     | __main__:process_frame:99 - 🤖 Maya回應: 如果你在，那一定很棒！可以一起分享想法和感受。如果有任何问题或話題，隨時告訴我，我會很樂意跟你聊聊！你有什麼想說的嗎？
+2025-09-17 22:13:17.103 | DEBUG    | pipecat.services.elevenlabs.tts:run_tts:674 - ElevenLabsTTSService#0: Generating TTS [如果你在，那一定很棒！可以一起分享想法和感受。如果有任何问题或話題，隨時告訴我，我會很樂意跟你聊聊！你有什麼想說的嗎？]
+2025-09-17 22:13:17.103 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:start_tts_usage_metrics:191 - ElevenLabsTTSService#0 usage characters: 59
+2025-09-17 22:13:17.103 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - ElevenLabsTTSService#0 processing time: 0.0002689361572265625
+2025-09-17 22:13:17.103 | INFO     | __main__:process_frame:58 - 🔊 TTS字符數: 59
+2025-09-17 22:13:17.103 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.00ms
+2025-09-17 22:13:17.657 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - ElevenLabsTTSService#0 TTFB: 0.5541021823883057
+2025-09-17 22:13:17.659 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.55ms
+2025-09-17 22:13:17.662 | DEBUG    | pipecat.transports.base_output:_bot_started_speaking:600 - Bot started speaking
+2025-09-17 22:13:18.285 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:337 - User started speaking
+2025-09-17 22:13:18.285 | DEBUG    | pipecat.pipeline.task:_source_push_frame:693 - PipelineTask#0: received interruption task frame InterruptionTaskFrame#16
+2025-09-17 22:13:18.287 | DEBUG    | pipecat.transports.base_output:_bot_stopped_speaking:616 - Bot stopped speaking
+2025-09-17 22:13:19.324 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:361 - User stopped speaking
+2025-09-17 22:13:19.955 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - OpenAISTTService#0 TTFB: 0.6306419372558594
+2025-09-17 22:13:19.955 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - OpenAISTTService#0 processing time: 0.6307599544525146
+2025-09-17 22:13:19.955 | DEBUG    | pipecat.services.whisper.base_stt:run_stt:221 - Transcription: [如果你在]
+2025-09-17 22:13:19.956 | INFO     | __main__:process_frame:83 - 👤 用戶說話: 如果你在
+2025-09-17 22:13:19.957 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.63ms
+2025-09-17 22:13:19.957 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.63ms
+2025-09-17 22:13:21.196 | INFO     | __main__:process_frame:99 - 🤖 Maya回應: 如果我在，那我一定会很高兴和你交流！不管是想聊天、提问还是分享什么，都会让我感到很快乐。你有什么想讨论的呢？
+2025-09-17 22:13:21.196 | DEBUG    | pipecat.services.elevenlabs.tts:run_tts:674 - ElevenLabsTTSService#0: Generating TTS [如果我在，那我一定会很高兴和你交流！不管是想聊天、提问还是分享什么，都会让我感到很快乐。你有什么想讨论的呢？]
+2025-09-17 22:13:21.196 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:start_tts_usage_metrics:191 - ElevenLabsTTSService#0 usage characters: 54
+2025-09-17 22:13:21.196 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_processing_metrics:152 - ElevenLabsTTSService#0 processing time: 0.00022482872009277344
+2025-09-17 22:13:21.196 | INFO     | __main__:process_frame:58 - 🔊 TTS字符數: 54
+2025-09-17 22:13:21.196 | INFO     | __main__:process_frame:53 - ⚡ 處理時間: 0.00ms
+2025-09-17 22:13:21.741 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:stop_ttfb_metrics:131 - ElevenLabsTTSService#0 TTFB: 0.5451970100402832
+2025-09-17 22:13:21.743 | INFO     | __main__:process_frame:51 - 🚀 首字節時間: 0.55ms
+2025-09-17 22:13:21.745 | DEBUG    | pipecat.transports.base_output:_bot_started_speaking:600 - Bot started speaking
+2025-09-17 22:13:22.535 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:337 - User started speaking
+2025-09-17 22:13:22.536 | DEBUG    | pipecat.pipeline.task:_source_push_frame:693 - PipelineTask#0: received interruption task frame InterruptionTaskFrame#17
+2025-09-17 22:13:22.537 | DEBUG    | pipecat.transports.base_output:_bot_stopped_speaking:616 - Bot stopped speaking
+2025-09-17 22:13:23.496 | DEBUG    | pipecat.transports.base_input:_handle_user_interruption:361 - User stopped speaking
